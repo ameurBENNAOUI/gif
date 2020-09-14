@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <title>Hello, world!</title>
+  </head>
+  <body>
+      <div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <h1 class="text-center mt-3"><a href="/" style="font-weight: bold; font-family: Arial; color: hotpink; text-decoration: none; text-shadow: 1px 1px #000;">Quote Sample</a></h1>
+            <p class="text-center">Your very own source of viral content for social media</p>
+          </div>
+        <div class="col-md-1"></div>       
+    </div>
+
+    <div class="row">
+
+        <!-- SETTINGS -->
+        <div class="col-md-6 mt-2 mb-4" id="settings">
+          <div class="card" id="settings">
+            <h5 class="card-header">Settings</h5>
+            <div class="card-body">
+    
+    
+              
+    
+    
+              <!-- QUOTE TEXT -->
+              <div class="card-item">
+                <h5 class="card-title">Quote text</h5>
+                <div class="mb-3" style="display: none;">
+                  <textarea class="form-control template-setting" type="text" placeholder="Sample quote text" id="quoteText" onchange="updateTemplate()" readonly="">Don't worry that children never listen to you; worry that they are always watching you.</textarea>
+                </div>
+                <div class="row">
+                  <!-- font -->
+                  <div class="col-lg-5">
+                    <div class="mb-3" id="quoteTextFont">
+                      <div style="margin-bottom: 1%;">Font</div>
+                      <select class="custom-select" id="quoteTextFontSelect" onchange="updateTemplate()" style="font-family: &quot;Patua One&quot;;">
+                        <option value="Amiko-SemiBold" style="font-family: 'Amiko'">Amiko</option>
+                        <option value="Anton-Regular" style="font-family: 'Anton'">Anton</option>
+                        <option value="Arvo-Bold" style="font-family: 'Verdana'; font-weight: bold">Arvo</option>
+                        <option value="Bangers-Regular" style="font-family: 'Bangers'">Bangers</option>
+                        <option value="Cookie-Regular" style="font-family: 'Cookie'">Cookie</option>
+                        <option value="Lobster-Regular" style="font-family: 'Lobster'">Lobster</option>
+                        <!-- <option value="Lobster-Two"  style="font-family: 'Lobster Two'">Lobster Two</option> -->
+                        <option value="Merriweather-Bold" style="font-family: 'Merriweather'">Merriweather</option>
+                        <!-- <option value="Nova-Round"  style="font-family: 'Nova Round'">Nova Round</option> -->
+                        <option value="Patua-One" selected="" style="font-family: 'Patua One'">Patua One</option>
+                        <option value="Playball" style="font-family: 'Playball'">Playball</option>
+                        <option value="PT-Serif-Caption" style="font-family: 'PT Serif Caption'">PT Serif Caption</option>
+                        <option value="Quando-Regular" style="font-family: 'Quando'">Quando</option>
+                        <option value="Quicksand-Bold" style="font-family: 'Quicksand'">Quicksand</option>
+                        <option value="Sarabun-Bold" style="font-family: 'Sarabun'">Sarabun</option>
+                        <option value="Signika-Bold" style="font-family: 'Signika'">Signika</option>
+                        <option value="Special-Elite-Regular" style="font-family: 'Special Elite'">Special Elite</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-xl-4" style="display: none">
+                    <!-- alignment -->
+                    <div class="btn-group btn-group-toggle mb-3 block-btn-group template-setting" data-toggle="buttons" id="quoteTextAlign" onclick="updateTemplate()">
+                      <label class="btn btn-outline-dark " value="left">
+                        <input type="radio" name="options" id="option1" autocomplete="off" checked=""><i class="fa fa-align-left"></i>
+                      </label>
+                      <label class="btn btn-outline-dark active " value="center">
+                        <input type="radio" name="options" id="option2" autocomplete="off"><i class="fa fa-align-center"></i>
+                      </label>
+                      <label class="btn btn-outline-dark " value="right">
+                        <input type="radio" name="options" id="option3" autocomplete="off"><i class="fa fa-align-right"></i>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-lg-7">
+                    <!-- animation -->
+                    <div class="mb-3" id="quoteTextAnimation">
+                      <div style="margin-bottom: 1%;">Animation (for GIFs and videos)</div>
+                      <select class="custom-select" id="quoteTextAnimationSelect" onchange="updateTemplate()">
+                        <option value="type">Typing</option>
+                        <option value="fadeLines">Fading lines</option>
+                        <option value="slideLines" selected="">Sliding lines</option>
+                        <option value="appendLines">Appended lines</option>
+                        <option value="fade">Fading</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+            </div>
+    
+            <!-- QUOTE AUTHOR -->
+            <div class="card-item">
+              <h5 class="card-title">Quote author</h5>
+              <!-- author -->
+              <div class="mb-3" style="display: none;">
+                <input class="form-control template-setting" type="text" placeholder="Sample quote author" id="authorText" onchange="updateTemplate()" value="Robert Fulghum" readonly="">
+              </div>
+              <div class="row">
+                <!-- font -->
+                <div class="col-lg-5">
+                  <div class="mb-3" id="authorTextFont">
+                    <div style="margin-bottom: 1%;">Font</div>
+                    <select class="custom-select" id="authorTextFontSelect" onchange="updateTemplate()" style="font-family: Merriweather;">
+                      <option value="Amiko-SemiBold" style="font-family: 'Amiko'">Amiko</option>
+                      <option value="Anton-Regular" style="font-family: 'Anton'">Anton</option>
+                      <option value="Arvo-Bold" style="font-family: 'Arvo'; font-weight: bold">Arvo</option>
+                      <option value="Bangers-Regular" style="font-family: 'Bangers'">Bangers</option>
+                      <option value="Cookie-Regular" style="font-family: 'Cookie'">Cookie</option>
+                      <option value="Lobster-Regular" style="font-family: 'Lobster'">Lobster</option>
+                      <!-- <option value="Lobster-Two"  style="font-family: 'Lobster Two'">Lobster Two</option> -->
+                      <option value="Merriweather-Bold" selected="" style="font-family: 'Merriweather'">Merriweather</option>
+                      <!-- <option value="Nova-Round"  style="font-family: 'Nova Round'">Nova Round</option> -->
+                      <option value="Patua-One" style="font-family: 'Patua One'">Patua One</option>
+                      <option value="Playball" style="font-family: 'Playball'">Playball</option>
+                      <option value="PT-Serif-Caption" style="font-family: 'PT Serif Caption'">PT Serif Caption</option>
+                      <option value="Quando-Regular" style="font-family: 'Quando'">Quando</option>
+                      <option value="Quicksand-Bold" style="font-family: 'Quicksand'">Quicksand</option>
+                      <option value="Sarabun-Bold" style="font-family: 'Sarabun'">Sarabun</option>
+                      <option value="Signika-Bold" style="font-family: 'Signika'">Signika</option>
+                      <option value="Special-Elite-Regular" style="font-family: 'Special Elite'">Special Elite</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-xl-4" style="display: none;">
+                  <!-- alignment -->
+                  <div class="btn-group btn-group-toggle mb-3 block-btn-group template-setting" data-toggle="buttons" id="authorTextAlign" onclick="updateTemplate()">
+                    <label class="btn btn-outline-dark " value="left">
+                      <input type="radio" name="options" id="option1" autocomplete="off" checked=""><i class="fa fa-align-left"></i>
+                    </label>
+                    <label class="btn btn-outline-dark active " value="center">
+                      <input type="radio" name="options" id="option2" autocomplete="off"><i class="fa fa-align-center"></i>
+                    </label>
+                    <label class="btn btn-outline-dark " value="right">
+                      <input type="radio" name="options" id="option3" autocomplete="off"><i class="fa fa-align-right"></i>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-7">
+                  <!-- animation -->
+                  <div class="mb-3" id="authorTextAnimation">
+                    <div style="margin-bottom: 1%;">Animation (for GIFs and videos)</div>
+                    <select class="custom-select" id="authorTextAnimationSelect" onchange="updateTemplate()">
+                      <option value="type">Typing</option>
+                      <option value="slide" selected="">Sliding</option>
+                      <option value="fade">Fading</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="card-item">
+              <h5 class="card-title mb-3">Quote-author separator</h5>
+              <div class="btn-group btn-group-toggle mb-3 block-btn-group template-setting" data-toggle="buttons" id="separator" onclick="updateTemplate()">
+                <label class="btn btn-outline-dark " value="none">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked="">None
+                </label>
+                <label class="btn btn-outline-dark active " value="solid">
+                  <input type="radio" name="options" id="option2" autocomplete="off">Vignette
+                </label>
+                <label class="btn btn-outline-dark " value="dots">
+                  <input type="radio" name="options" id="option3" autocomplete="off">✶ ✶ ✶
+                </label>
+              </div>
+            </div>
+    
+            <div class="card-item">
+              <h5 class="card-title mb-3">Filter</h5>
+              <div class="btn-group btn-group-toggle mb-3 block-btn-group template-setting" data-toggle="buttons" id="filter" onclick="updateTemplate()">
+                <label class="btn btn-outline-dark active " value="none">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked="">None
+                </label>
+                <label class="btn btn-outline-dark " value="shade">
+                  <input type="radio" name="options" id="option2" autocomplete="off">Shade
+                </label>
+                <label class="btn btn-outline-dark " value="blur">
+                  <input type="radio" name="options" id="option3" autocomplete="off">Blur
+                </label>
+                <label class="btn btn-outline-dark " value="bw">
+                  <input type="radio" name="options" id="option3" autocomplete="off">B/W
+                </label>
+                <label class="btn btn-outline-dark " value="sepia">
+                  <input type="radio" name="options" id="option3" autocomplete="off">Sepia
+                </label>
+                <label class="btn btn-outline-dark " value="pixelate">
+                  <input type="radio" name="options" id="option3" autocomplete="off">Pixelate
+                </label>
+              </div>
+            </div>
+    
+            <div class="card-item">
+              <h5 class="card-title mb-3">Overlay</h5>
+              <div class="btn-group btn-group-toggle mb-3 block-btn-group template-setting" data-toggle="buttons" id="overlay" onclick="updateTemplate()">
+                <label class="btn btn-outline-dark active " value="none">
+                  <input type="radio" name="options" id="option1" autocomplete="off" checked="">None
+                </label>
+                <label class="btn btn-outline-dark " value="solid">
+                  <input type="radio" name="options" id="option2" autocomplete="off">Solid
+                </label>
+                <label class="btn btn-outline-dark " value="border">
+                  <input type="radio" name="options" id="option3" autocomplete="off">Border
+                </label>
+                <label class="btn btn-outline-dark " value="lines">
+                  <input type="radio" name="options" id="option3" autocomplete="off">Lines
+                </label>
+              </div>
+            </div>
+    
+            </div>
+          </div>
+        </div>
+    
+    
+    
+          <!-- SAMPLE IMAGE -->
+        <div class="col-md-6 mt-2 mb-4" id="sample">
+            <div class="card" id="sample">
+              <h5 class="card-header">Sample</h5>
+              <div class="card-body">
+    
+    
+                <div id="thumbnail_container">
+                    <div id="loader">
+                      <div id="loading_indicator"></div>
+                      <!-- <div id="loading_text">Generating sample,<br>please wait...</div> -->
+                    </div>
+                    <div>
+                        <div class="quat-talk">
+                            <p class="animate__animated animate__fadeInDown">No pain,No gain</p>
+                            <p class="animate__animated animate__fadeInDown">every body talking </p>
+                            <p class="animate__animated animate__fadeInDown">about the success </p>
+                            <p class="animate__animated animate__fadeInDown"> but few people do </p>
+                            <!-- <span>*****</span>
+                            <span>====</span>
+                            <a href="">Albert</a> -->
+                        </div>
+                        <div id="update_thumbnail" onclick="setTimeout(function(){generateThumbnails();}, 200)"><img style="height: 520px;width: 508px" src="img/bookshelf-1082309_1920.jpg" class="img-fluid"></div>
+                    </div>             
+                    </div>
+    
+    
+                <hr>
+                <div class="alert alert-primary text-center" role="alert">
+                  The actual image type (static/animated GIF/video), quote theme, and background images will depend on the settings of specific order(s) built based on this template.
+                </div>
+                
+                  <input type="button" class="btn btn-success btn-block" value="Save and return to templates" id="saveButton" onclick="updateTemplate(); location.href = '/templates';">
+                
+    
+    
+    
+              </div>
+            </div>
+          </div>
+    
+    </div>   
+
+      
+</div>
+      
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="js/javascript.js" ></script>
+  </body>
+</html>
